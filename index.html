@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Flask for Fun</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="section">
+        <h1 class="title">Pick the language, the category and the number of jokes to hear</h1>
+        <div class="container">
+            <form class="form" method="post" action="/">
+                <div class="fixed-grid has-3-cols">
+                    <div class="grid">
+                        <div class="field cell" id="fieldLanguage">
+                            <label>Language</label>
+                            <div class="control select is-fullwidth">
+                                <select name="language" id="selLang">
+                                </select>                                
+                            </div>
+                        </div>
+                        <div class="field cell" id="fieldCategory">
+                            <label>Category</label>
+                            <div class="control select is-fullwidth">
+                                <select name="category" id="selCat">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field cell" id="fieldNumber">
+                            <label>Number of Jokes</label>
+                            <div class="control select is-fullwidth">
+                                <select name="number" id="selNum">
+                                    <!-- Options for number of jokes (1-9) -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field cell" id="fieldJokeId">
+                            <label>Joke ID (Optional)</label>
+                            <div class="control">
+                                <input type="number" name="jokeId" id="jokeId" class="input" placeholder="Enter Joke ID">
+                            </div>
+                        </div>
+                        <div class="cell is-col-span-3">
+                            <button type="submit" id="btnAmuse" class="button is-primary is-fullwidth">Amuse me</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container" id="jokes">
+            <!-- Display jokes or errors here -->
+        </div>
+    </div>
+</body>
+
+</html>
